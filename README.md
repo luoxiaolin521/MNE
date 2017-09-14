@@ -24,13 +24,13 @@ We provided two cases for MNE:
 1. FB15K: [FreeBase][2]
 2. WN18: [WordNet][3]
 
-and there are six files/folders for each case:
+and there are six files for each case (zipped the data to meet the space limit):
 - `MNE.cpp`: The MNE model for embedding
 - `logistic-link-prediction.py`: Link prediction by the embedded network
 - `logistic-triplet-classification.py`: Triplet classification by the embedded network
-- `/data for embedding`: The dataset for embedding training
-- `/data for link prediction`: The dataset for link prediction
-- `/data for triplet classification`: The dataset for triplet classification
+- `data for embedding.zip`: The dataset for embedding training
+- `data for link prediction.zip`: The dataset for link prediction
+- `data for triplet classification.zip`: The dataset for triplet classification
 
 # Note
 The output files will be stored in `./result ` directory during embedding training.
