@@ -17,8 +17,25 @@ If you would like to acknowledge our efforts, please cite the following paper:
 # Prerequisites
 C++
 
-# Usage
+python 3
 
+# Usage
+We provided two cases for MNE:
+1. FB15K: [FreeBase][2]
+2. WN18: [WordNet][3]
+
+and there are six files/folders for each case:
+- `MNE.cpp`: The MNE model for embedding
+- `logistic-link-prediction.py`: Link prediction by the embedded network
+- `logistic-triplet-classification.py`: Triplet classification by the embedded network
+- `/data for embedding`: The dataset for embedding training
+- `/data for link prediction`: The dataset for link prediction
+- `/data for triplet classification`: The dataset for triplet classification
+
+# Note
+The output files will be stored in `./result ` directory during embedding training.
 
 
 [1]: https://www.ijcai.org/proceedings/2017/565
+[2]: http://dl.acm.org/citation.cfm?id=1376746
+[3]: http://dl.acm.org/citation.cfm?id=219748
