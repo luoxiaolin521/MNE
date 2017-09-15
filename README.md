@@ -20,7 +20,7 @@ C++
 python 3
 
 # Usage
-We provided two cases for MNE:
+We provide two cases for MNE:
 1. FB15K: [FreeBase][2]
 2. WN18: [WordNet][3]
 
