@@ -17,7 +17,6 @@ If you would like to acknowledge our efforts, please cite the following paper:
 # Prerequisites
 C++
 
-python 3
 
 # Usage
 We provide two cases for MNE:
@@ -26,8 +25,6 @@ We provide two cases for MNE:
 
 and there are six files for each case (zipped the data to meet the space limit):
 - `MNE.cpp`: The MNE model for embedding
-- `logistic-link-prediction.py`: Link prediction by the embedded network
-- `logistic-triplet-classification.py`: Triplet classification by the embedded network
 - `data for embedding.zip`: The dataset for embedding training
 - `data for link prediction.zip`: The dataset for link prediction
 - `data for triplet classification.zip`: The dataset for triplet classification
