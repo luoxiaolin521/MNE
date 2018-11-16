@@ -17,8 +17,22 @@ If you would like to acknowledge our efforts, please cite the following paper:
 # Prerequisites
 C++
 
-# Usage
 
+# Usage
+We provide two cases for MNE:
+1. FB15K: [FreeBase][2]
+2. WN18: [WordNet][3]
+
+and there are six files for each case (zipped the data to meet the space limit):
+- `MNE.cpp`: The MNE model for embedding
+- `data for embedding.zip`: The dataset for embedding training
+- `data for link prediction.zip`: The dataset for link prediction
+- `data for triplet classification.zip`: The dataset for triplet classification
+
+# Note
+The output files will be stored in `./result ` directory during embedding training.
 
 
 [1]: https://www.ijcai.org/proceedings/2017/565
+[2]: http://dl.acm.org/citation.cfm?id=1376746
+[3]: http://dl.acm.org/citation.cfm?id=219748
