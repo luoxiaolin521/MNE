@@ -16,7 +16,9 @@ If you would like to acknowledge our efforts, please cite the following paper:
 
 # Prerequisites
 C++
+
 python 3
+
 sklearn
 
 # Usage
