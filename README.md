@@ -18,19 +18,35 @@ If you would like to acknowledge our efforts, please cite the following paper:
 C++
 
 
+python 3
+
+sklearn
+
 # Usage
-We provide two cases for MNE:
-1. FB15K: [FreeBase][2]
-2. WN18: [WordNet][3]
-
-and there are six files for each case (zipped the data to meet the space limit):
+There are five files/folder (some may be zipped to meet the space limit):
 - `MNE.cpp`: The MNE model for embedding
-- `data for embedding.zip`: The dataset for embedding training
-- `data for link prediction.zip`: The dataset for link prediction
-- `data for triplet classification.zip`: The dataset for triplet classification
+- `logistic_classification.py`: The classifier for classification
+- `logistic_link_prediction.py`: The classifier for link prediction
+- `FB15k`: The dataset case from [FreeBase][2]
+- `WN18`: The dataset case from [WordNet][3]
 
-# Note
-The output files will be stored in `./result ` directory during embedding training.
+## Run for classification
+```shell
+./mne -trainset data/all_train.txt -outputdir output/ -entity2id data/entity2id.txt -relation2id data/relation2id.txt
+python logistic_classification.py -entityVec output/entity_vec.txt -relationVec output/relation_vec.txt -trainLink data/train_link.txt -result result/testresult_MNE.txt
+```
+
+## Run for link prediction
+```shell
+./mne -trainset data/train.txt -outputdir output/ -entity2id data/entity2id.txt -relation2id data/relation2id.txt
+python logistic_link_prediction.py -entityVec output/entity_vec.txt -relationVec output/relation_vec.txt -trainLink data/train_link.txt -testLink data/test_link.txt -result result/testresult_MNE.txt
+```
+
+## Note
+- The output files (learned embeddings) will be stored in the `-outputdir ` directory during embedding training.
+- Please make the `-result` directory before run the program, and the test results will be stored in the `-result` directory.
+- the `all_train.txt` in the run case means the file which contans all triples in dataset, equalling `train.txt` + `valid.txt` + `test.txt`.
+
 
 
 [1]: https://www.ijcai.org/proceedings/2017/565
